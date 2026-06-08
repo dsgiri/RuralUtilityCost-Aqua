@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export default function ProfitCalculator() {
   const [inputs, setInputs] = useState({
@@ -25,6 +26,11 @@ export default function ProfitCalculator() {
 
   return (
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+      <SEO 
+        title="Aquaculture Profit Calculator" 
+        description="Analyze overall cycle profitability, gross margin, net revenue, and crucial breakeven metrics for farm viability."
+        keywords="aquaculture profit calculator, fish farm breakeven cost, gross margin aquaculture, target ROI fish farming"
+      />
       <div className="flex-1 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Profit & Breakeven</h1>

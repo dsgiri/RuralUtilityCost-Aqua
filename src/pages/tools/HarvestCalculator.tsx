@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export default function HarvestCalculator() {
   const [inputs, setInputs] = useState({
@@ -21,6 +22,11 @@ export default function HarvestCalculator() {
 
   return (
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+      <SEO 
+        title="Harvest & Biomass Estimator" 
+        description="Estimate harvesting outcomes including survival rates, net harvest weight, and total facility biomass."
+        keywords="aquaculture harvest calculator, fish biomass estimator, stocking density to harvest, fish survival rate"
+      />
       <div className="flex-1 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Harvest & Survival</h1>

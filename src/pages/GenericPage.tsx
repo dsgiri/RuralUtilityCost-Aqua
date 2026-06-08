@@ -1,6 +1,12 @@
+import SEO from '../components/SEO';
+
 export default function GenericPage({ title }: { title: string }) {
   return (
     <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+      <SEO 
+        title={title}
+        description={`Read the ${title} for Aqua by Rural Utility Cost.`}
+      />
       <h1 className="text-3xl font-bold text-slate-900 mb-6">{title}</h1>
       <p className="text-slate-600 mb-4">
         This is a shared page inherited from the Rural Utility Cost master ecosystem.

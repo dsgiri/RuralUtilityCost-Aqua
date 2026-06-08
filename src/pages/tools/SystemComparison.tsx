@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import SEO from '../../components/SEO';
 
 interface SystemScenario {
   name: string;
@@ -36,6 +37,11 @@ export default function SystemComparison() {
 
   return (
     <div className="max-w-6xl mx-auto space-y-8">
+      <SEO 
+        title="Aquaculture System Comparison" 
+        description="Compare different aquaculture systems, scenarios, or production strategies to find the most profitable configuration."
+        keywords="RAS vs pond culture comparison, aquaculture system modeling, compare fish farming scenarios, intensive vs extensive aquaculture"
+      />
       <div>
         <h1 className="text-3xl font-bold text-slate-900 mb-2">System Comparison</h1>
         <p className="text-slate-600">Model economics across different production systems to evaluate comparative advantages.</p>

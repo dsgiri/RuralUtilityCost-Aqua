@@ -4,6 +4,7 @@
  */
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -11,6 +12,7 @@ import Favorites from './pages/Favorites';
 import About from './pages/About';
 import Legal from './pages/Legal';
 import GenericPage from './pages/GenericPage';
+import NotFound from './pages/NotFound';
 
 import CostEstimator from './pages/tools/CostEstimator';
 import FeedCalculator from './pages/tools/FeedCalculator';
@@ -20,29 +22,34 @@ import SystemComparison from './pages/tools/SystemComparison';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="favorites" element={<Favorites />} />
-          
-          <Route path="tools">
-            <Route path="estimate" element={<CostEstimator />} />
-            <Route path="feed" element={<FeedCalculator />} />
-            <Route path="harvest" element={<HarvestCalculator />} />
-            <Route path="profit" element={<ProfitCalculator />} />
-            <Route path="compare" element={<SystemComparison />} />
-          </Route>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="favorites" element={<Favorites />} />
+            
+            <Route path="tools">
+              <Route path="estimate" element={<CostEstimator />} />
+              <Route path="feed" element={<FeedCalculator />} />
+              <Route path="harvest" element={<HarvestCalculator />} />
+              <Route path="profit" element={<ProfitCalculator />} />
+              <Route path="compare" element={<SystemComparison />} />
+            </Route>
 
-          <Route path="about" element={<About />} />
-          <Route path="legal" element={<Legal />} />
-          
-          {/* Shared generic pages for Rural Utility Cost mapping */}
-          <Route path="contact" element={<GenericPage title="Contact Us" />} />
-          <Route path="privacy" element={<GenericPage title="Privacy Policy" />} />
-          <Route path="terms" element={<GenericPage title="Terms of Service" />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            <Route path="about" element={<About />} />
+            <Route path="legal" element={<Legal />} />
+            
+            {/* Shared generic pages for Rural Utility Cost mapping */}
+            <Route path="contact" element={<GenericPage title="Contact Us" />} />
+            <Route path="privacy" element={<GenericPage title="Privacy Policy" />} />
+            <Route path="terms" element={<GenericPage title="Terms of Service" />} />
+            
+            {/* 404 Route */}
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }

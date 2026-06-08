@@ -1,10 +1,17 @@
 import { TOOLS } from '../data';
 import ToolCard from '../components/ToolCard';
 import { Droplet, TrendingUp, Calculator } from 'lucide-react';
+import SEO from '../components/SEO';
+import AdSensePlaceholder from '../components/AdSensePlaceholder';
 
 export default function Home() {
   return (
     <div className="flex flex-col md:flex-row gap-6">
+      <SEO 
+        title="Aquaculture Economics Hub" 
+        description="Decision-support tools for fish farms, ponds, tanks, and aquaponics. Estimate startup costs, track feed efficiency, and model scenarios for aquaculture."
+        keywords="aquaculture costs, fish farming economics, aquaponics budget, feed conversion ratio calculator, aquaculture profit"
+      />
       <aside className="w-full md:w-64 space-y-6">
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
           <div className="flex items-center gap-3 mb-4">
@@ -19,6 +26,8 @@ export default function Home() {
             Decision-support tools for fish farms, ponds, tanks, and aquaponics. Estimate startup costs, track feed efficiency, and model scenarios.
           </p>
         </div>
+
+        <AdSensePlaceholder slot="SIDEBAR_SLOT_ID" format="rectangle" />
 
         <div className="bg-teal-900 rounded-xl p-5 text-white shadow-lg">
           <h4 className="text-teal-400 text-xs font-bold uppercase mb-2">Pro Tip</h4>
@@ -43,6 +52,8 @@ export default function Home() {
             <ToolCard key={tool.id} tool={tool} />
           ))}
         </div>
+
+        <AdSensePlaceholder slot="IN_CONTENT_SLOT_ID" format="fluid" />
 
         <div className="bg-white rounded-xl p-6 border border-slate-200 mt-8">
           <h2 className="text-xl font-bold text-slate-800 mb-4 items-center flex gap-2">

@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export default function FeedCalculator() {
   const [inputs, setInputs] = useState({
@@ -25,6 +26,11 @@ export default function FeedCalculator() {
 
   return (
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+      <SEO 
+        title="Feed & FCR Calculator" 
+        description="Model feed conversion ratio, feed consumption, and total feed cost for an aquaculture grow-out cycle."
+        keywords="aquaculture feed calculator, FCR calculator, feed conversion ratio, fish feed cost"
+      />
       <div className="flex-1 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Feed & FCR Calculator</h1>

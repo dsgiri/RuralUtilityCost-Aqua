@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { formatCurrency } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 export default function CostEstimator() {
   const [inputs, setInputs] = useState({
@@ -30,6 +31,11 @@ export default function CostEstimator() {
 
   return (
     <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+      <SEO 
+        title="Aqua Cost Estimator" 
+        description="Estimate total startup, variable, and overhead costs for your production system. Evaluate equipment, licensing, energy and labor."
+        keywords="aquaculture startup cost, fish farming cost estimator, pond culture costs, RAS cost"
+      />
       <div className="flex-1 space-y-6">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2">Aqua Cost Estimator</h1>
