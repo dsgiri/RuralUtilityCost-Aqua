@@ -1,10 +1,34 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { Droplet, Heart, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const titles: Record<string, string> = {
+      '/': 'Home',
+      '/tools/estimate': 'Cost Estimator',
+      '/tools/feed': 'Feed & FCR Calculator',
+      '/tools/harvest': 'Harvest Calculator',
+      '/tools/profit': 'Profit & Breakeven',
+      '/tools/compare': 'System Comparison',
+      '/favorites': 'Favorites',
+      '/about': 'About',
+      '/contact': 'Contact Us',
+      '/legal': 'Legal & Disclaimer',
+      '/privacy': 'Privacy Policy',
+      '/terms': 'Terms of Service',
+    };
+    const pTitle = titles[location.pathname];
+    document.title = pTitle 
+      ? `${pTitle} | Aqua by Rural Utility Cost` 
+      : 'Aqua - Aquaculture Economics & Planning | Rural Utility Cost';
+      
+    // Auto-scroll to top on route change for better mobile UX
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
