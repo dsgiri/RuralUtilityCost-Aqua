@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
 import SEO from '../../components/SEO';
+import Disclaimer from '../../components/Disclaimer';
 
 export default function HarvestCalculator() {
   const [inputs, setInputs] = useState({
@@ -78,6 +79,8 @@ export default function HarvestCalculator() {
             <p className="text-3xl font-bold text-teal-400">{formatNumber(totalHarvestYieldKg)} kg</p>
             <p className="text-xs text-slate-500 mt-2">({formatNumber(totalHarvestYieldKg * 2.20462)} lbs)</p>
           </div>
+          
+          <Disclaimer variant="dark" />
         </div>
       </div>
     </div>

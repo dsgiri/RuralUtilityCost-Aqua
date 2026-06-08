@@ -155,8 +155,13 @@ export default function Layout() {
             <a href="#" className="hover:text-teal-600 min-h-[48px] flex items-center">Master Site</a>
           </nav>
         </div>
-        <div className="text-center sm:text-right italic mt-4 sm:mt-0">
-          Estimates only. Not financial or biological advice.
+        <div className="text-center sm:text-right mt-4 sm:mt-0 text-[10px] leading-relaxed max-w-xs sm:ml-auto space-y-1">
+          <p className="font-medium text-slate-600">Disclaimer: Results are estimates only.</p>
+          <p>
+            <Link to="/legal" className="text-teal-600 hover:text-teal-700 hover:underline inline-flex items-center min-h-[24px]">
+              See full legal disclaimer 
+            </Link>
+          </p>
         </div>
       </footer>
       

@@ -1,10 +1,24 @@
+import SEO from '../components/SEO';
+import { defaultDisclaimerText } from '../components/Disclaimer';
+
 export default function Legal() {
   return (
     <div className="max-w-3xl mx-auto space-y-8">
+      <SEO 
+        title="Legal & Disclaimer" 
+        description="Legal information and disclaimers for the Aqua estimators and tools." 
+      />
       <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
         <h1 className="text-3xl font-bold text-slate-900 mb-6">Legal & Disclaimer</h1>
         
         <div className="prose prose-slate max-w-none text-slate-700">
+          <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-8">
+            <h2 className="text-lg font-bold text-slate-900 mt-0 mb-3">Universal Tool Disclaimer</h2>
+            <p className="text-sm text-slate-600 leading-relaxed m-0">
+              {defaultDisclaimerText}
+            </p>
+          </div>
+
           <h2 className="text-xl font-bold text-slate-900 mt-6 mb-3">Estimates Only</h2>
           <p className="mb-4">
             All data, calculations, and projections provided by the Aqua estimators are <strong>estimates only</strong>. They are intended for educational, planning, and decision-support purposes and do not constitute a guarantee of future performance.

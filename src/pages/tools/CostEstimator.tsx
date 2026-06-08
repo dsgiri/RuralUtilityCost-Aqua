@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { formatCurrency } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
 import SEO from '../../components/SEO';
+import Disclaimer from '../../components/Disclaimer';
 
 export default function CostEstimator() {
   const [inputs, setInputs] = useState({
@@ -132,6 +133,8 @@ export default function CostEstimator() {
             <p className="text-3xl font-bold text-teal-400">{formatCurrency(totalCost)}</p>
             <p className="text-xs text-slate-500 mt-2">Excludes feed and unexpected mortalities.</p>
           </div>
+          
+          <Disclaimer variant="dark" />
         </div>
       </div>
     </div>

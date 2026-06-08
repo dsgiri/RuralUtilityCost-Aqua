@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
 import SEO from '../../components/SEO';
+import Disclaimer from '../../components/Disclaimer';
 
 export default function ProfitCalculator() {
   const [inputs, setInputs] = useState({
@@ -105,6 +106,8 @@ export default function ProfitCalculator() {
               {formatCurrency(grossProfit)}
             </p>
           </div>
+          
+          <Disclaimer variant="dark" />
         </div>
       </div>
     </div>

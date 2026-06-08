@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import SEO from '../../components/SEO';
+import Disclaimer from '../../components/Disclaimer';
 
 interface SystemScenario {
   name: string;
@@ -107,6 +108,8 @@ export default function SystemComparison() {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      
+      <Disclaimer variant="light" />
     </div>
   );
 }

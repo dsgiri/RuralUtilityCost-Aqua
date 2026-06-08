@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import { formatCurrency, formatNumber } from '../../lib/utils';
 import { Calculator } from 'lucide-react';
 import SEO from '../../components/SEO';
+import Disclaimer from '../../components/Disclaimer';
 
 export default function FeedCalculator() {
   const [inputs, setInputs] = useState({
@@ -93,6 +94,8 @@ export default function FeedCalculator() {
             <p className="text-slate-400 text-xs mb-1 uppercase tracking-wider font-semibold">Total Feed Cycle Cost</p>
             <p className="text-3xl font-bold text-teal-400">{formatCurrency(totalFeedCost)}</p>
           </div>
+          
+          <Disclaimer variant="dark" />
         </div>
       </div>
     </div>
