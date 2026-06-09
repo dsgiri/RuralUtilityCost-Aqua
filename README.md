@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Aqua - Rural Utility Cost
 
-# Run and deploy your AI Studio app
+**Aqua** is the aquaculture and water-production economics hub for ruralutilitycost.com. It provides decision-support tools for fish farms, ponds, tanks, and aquaponics, helping operators estimate startup costs, track feed efficiency, and model financial scenarios.
 
-This contains everything you need to run your app locally.
+## Features
+- **Aqua Cost Estimator**: Model upfront capital requirements and variable costs.
+- **Feed & FCR Calculator**: Model feed requirements and conversion efficiency.
+- **Harvest & Survival Modeler**: Estimate harvest output based on stocking densities.
+- **Profit & Breakeven Tool**: Analyze overall cycle profitability.
+- **System Comparison**: Evaluate comparative advantages across different production systems.
+- **Favorites**: Save frequently used tools to local storage.
 
-View your app in AI Studio: https://ai.studio/apps/030d0cb4-5685-47b9-8f6b-d0c89e347d14
+## Tech Stack
+- React 19
+- React Router DOM
+- React Helmet Async (for SEO)
+- Tailwind CSS v4
+- Lucide React (Icons)
+- Recharts (Data Visualization)
+- Vite
 
-## Run Locally
+## Principles
+- **Mobile First**: Fully responsive layouts adaptable from 320px up to 1440px.
+- **SEO Optimized**: Each tool is equipped with full meta tags, JSON-LD schema, and Open Graph configurations.
+- **Liability Protection**: Integrated, consistent legal disclaimers on every calculation output.
 
-**Prerequisites:**  Node.js
+## Development
 
+Install dependencies:
+```bash
+npm install
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Start the development server:
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```
